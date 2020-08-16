@@ -1,5 +1,5 @@
 /* 
-https://programmers.co.kr/learn/courses/30/lessons/67256
+https://programmers.co.kr/learn/courses/30/lessons/67256    <---------------  링크추가
  <[카카오 인턴] 키패드 누르기> - 시뮬레이션
  
  Test Case 1
