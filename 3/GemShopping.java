@@ -1,4 +1,4 @@
-/* 
+/* 2020-08-15
 https://programmers.co.kr/learn/courses/30/lessons/67258
  <[카카오 인턴] 보석 쇼핑> - 슬라이딩 윈도우
  

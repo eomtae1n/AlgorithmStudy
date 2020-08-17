@@ -1,4 +1,4 @@
-/* 
+/* 2020-08-15
 https://programmers.co.kr/learn/courses/30/lessons/67257
  <[카카오 인턴] 수식 최대화> - 스택, 완전탐색, 시뮬레이션
  

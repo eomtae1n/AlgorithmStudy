@@ -1,4 +1,4 @@
-/* 
+/* 2020-08-15
 https://programmers.co.kr/learn/courses/30/lessons/12943
  <콜라츠 추측> - 배열, 시뮬레이션
  

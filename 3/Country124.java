@@ -1,4 +1,4 @@
-/* 
+/* 2020-08-15
 https://programmers.co.kr/learn/courses/30/lessons/12899
  <124 나라의 숫자> - 3진법, 반복문
  
