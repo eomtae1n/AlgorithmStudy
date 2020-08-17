@@ -13,7 +13,7 @@ https://programmers.co.kr/learn/courses/30/lessons/12906
 
 import java.util.ArrayList;
 
-public class NoSameNum {
+public class NoSameNum { 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

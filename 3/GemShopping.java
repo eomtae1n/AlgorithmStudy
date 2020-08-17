@@ -26,7 +26,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-public class GemShopping {
+public class GemShopping { 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

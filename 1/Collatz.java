@@ -45,7 +45,7 @@ public class Collatz {
         	if(num1 == 1) return answer;
         }
         
-        return -1;
+        return -1; 
 	}
 	
 }

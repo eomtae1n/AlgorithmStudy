@@ -19,7 +19,7 @@ https://programmers.co.kr/learn/courses/30/lessons/12899
  	- return : 422
  */
 
-public class Country124 {
+public class Country124 { 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

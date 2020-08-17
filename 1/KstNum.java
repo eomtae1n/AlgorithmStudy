@@ -36,7 +36,7 @@ public class KstNum {
 	        answer[x] = temp[commands[x][2]-1];
 		}
 		
-		return answer;
+		return answer; 
 	}
 
 }

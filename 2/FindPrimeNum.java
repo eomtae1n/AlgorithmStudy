@@ -16,7 +16,7 @@ https://programmers.co.kr/learn/courses/30/lessons/42839
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class FindPrimeNum {
+public class FindPrimeNum { 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

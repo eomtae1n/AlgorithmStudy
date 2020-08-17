@@ -19,7 +19,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
 
-public class MaxFomula {
+public class MaxFomula { 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
