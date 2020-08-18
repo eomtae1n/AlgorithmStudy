@@ -88,11 +88,5 @@ public class BadUser {
             check[i] = false;
         }
     }
-    public static void printAnswer(ArrayList<Integer> picked) {
-        for(int i = 0; i < picked.size(); i ++) {
-            System.out.print(picked.get(i) + " ");
-        }
-        System.out.println();
-    }
 	
 }
