@@ -1,5 +1,5 @@
 /* 2020-08-18
-https://programmers.co.kr/learn/courses/30/lessons/64061    <---------------  링크추가
+https://programmers.co.kr/learn/courses/30/lessons/64062    <---------------  링크추가
  <[카카오 인턴] 징검다리 건너기> - 이분탐색
  
  Test Case 1
