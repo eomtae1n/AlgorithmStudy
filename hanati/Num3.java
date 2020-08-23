@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /* 2020-08-22
  <[하나금융티아이 코딩테스트] 손절, 익절>
  
@@ -11,6 +13,12 @@
  Test Case 1
  	- input : n = [5, 7, 1, 6, 4]
  	- return : 	5
+ 	
+ 	
+ 2020-08-23 
+ 	기존 방법은 이중 for문을 이용한 완전탐색 방법으로 시간복잡도가 n^2이었기에
+ 	복잡도를 줄이고자 다양한 방법을 시도해봄
+ 	그 중 stack을 이용한 방법은 시간복잡도가 n으로 효율성이 좋기에 코드 수정
  */
 
 public class Num3 {
@@ -23,11 +31,18 @@ public class Num3 {
 
 	public static int solution(int[] n) {
 		int max = -101;
+		Stack<Integer> stack = new Stack<>();
 		
-		for(int i=0; i<n.length; i++) {
-			for(int j=i+1; j<n.length; j++) {
-				if(n[j] - n[i] > max)
-					max = n[j] - n[i];
+		for(int i : n) {
+			if(stack.isEmpty()) stack.add(i);		// 비어있다면
+			
+			else {
+				if(i - stack.peek() > max) max = i - stack.peek();	// 지금까지의 최댓값보다 크다면 최댓값 갱신
+			
+				if(i < stack.peek()) {				// 스택 안에 있는 숫자가 새로운 숫자보다 크다면 스택 안의 숫자 갱신
+					stack.pop();
+					stack.add(i);
+				}
 			}
 		}
 		
