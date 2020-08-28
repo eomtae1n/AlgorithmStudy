@@ -84,18 +84,18 @@ public class Traffic {
 
 	public static int solution(String[] lines) {
         int answer = 0;
-        LocalDateTime[][] times = new LocalDateTime[lines.length][2];
+        LocalDateTime[][] times = new LocalDateTime[lines.length][2];		// 응답 완료 시각과 응답 시작 시각을 저장한 배열
         
         for(int i=0; i<lines.length; i++) {
         	String[] split = lines[i].split(" ");
         	
-        	LocalDateTime finishedTime = LocalDateTime.parse(split[0] + "T" + split[1]);
+        	LocalDateTime finishedTime = LocalDateTime.parse(split[0] + "T" + split[1]);		// 응답 완료 시각
         	
         	long T = (long)(Float.parseFloat(split[2].substring(0, split[2].length()-1)) * (float)1000000000) - 1000000;
         	T = T / 1000000;
-        	T = T * 1000000;
+        	T = T * 1000000;		// 처리 시간 T를 nanoSecond로 표현
         	
-        	LocalDateTime startedTime = finishedTime.minusNanos(T);
+        	LocalDateTime startedTime = finishedTime.minusNanos(T);								// 응답 시작 시각 = 응답 완료 시각 - 처리시간
         	
         	//System.out.println(startedTime + " ~ " + finishedTime);
         	
@@ -105,13 +105,13 @@ public class Traffic {
         
         //System.out.println();
         for(int i=0; i<times.length; i++) {
-        	LocalDateTime l1 = times[i][0];
-        	LocalDateTime l2 = l1.plusSeconds(1).minusNanos(1000000);
+        	LocalDateTime l1 = times[i][0];									// 응답 시작 시각
+        	LocalDateTime l2 = l1.plusSeconds(1).minusNanos(1000000);		// 응답 시작 시각 + 1초
         	
         	//System.out.println(l1 + " ~ " + l2);
         	
         	int cnt1 = 0;
-        	for(int j=0; j<times.length; j++) {
+        	for(int j=0; j<times.length; j++) {								// 1초 내에 몇 개의 처리량이 있는지
         		if( (l1.isAfter(times[j][0]) || l1.isEqual(times[j][0])) && (l1.isBefore(times[j][1]) || l1.isEqual(times[j][1])) )
         				cnt1++;
         		else if( (l1.isBefore(times[j][0]) || l1.isEqual(times[j][0])) && (l2.isAfter(times[j][1]) || l2.isEqual(times[j][1])) )
@@ -120,11 +120,11 @@ public class Traffic {
         				cnt1++;
         	}
         	
-        	l1 = times[i][1];
-        	l2 = l1.plusSeconds(1).minusNanos(1000000);
+        	l1 = times[i][1];												// 응답 완료 시각
+        	l2 = l1.plusSeconds(1).minusNanos(1000000);						// 응답 완료 시각 + 1초
         	
         	int cnt2 = 0;
-        	for(int j=0; j<times.length; j++) {
+        	for(int j=0; j<times.length; j++) {								// 1초 내에 몇 개의 처리량이 있는지
         		if( (l1.isAfter(times[j][0]) || l1.isEqual(times[j][0])) && (l1.isBefore(times[j][1]) || l1.isEqual(times[j][1])) )
         				cnt2++;
         		else if( (l1.isBefore(times[j][0]) || l1.isEqual(times[j][0])) && (l2.isAfter(times[j][1]) || l2.isEqual(times[j][1])) )
@@ -134,7 +134,7 @@ public class Traffic {
         	}
         	
         	if(answer < Math.max(cnt1, cnt2))
-        		answer = Math.max(cnt1, cnt2);
+        		answer = Math.max(cnt1, cnt2);			// answer 갱신
         }
         
         return answer;
